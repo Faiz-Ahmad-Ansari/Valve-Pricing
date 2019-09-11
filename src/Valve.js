@@ -22,7 +22,7 @@ class Valve extends React.Component{
                 <div>{pricing.Type}</div>
                 <div>{pricing.MOC}</div>
                 <div>{pricing.Rating}</div>
-                <div>{pricing.Size}" Inch</div>
+                <div>{pricing.Size}"</div>
                 <div id='price'>Rs. {pricing.Price}/-</div>
             </div>
         )
