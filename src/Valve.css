@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+}
+
+input{
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.price div{
+    width: 100%;
+}
+
+.price:hover{
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#price{
+    font-weight: bold;  
+}
+
+.valveparameter{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.valveparameter div{
+    width: 100%;
+}

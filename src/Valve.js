@@ -1,5 +1,6 @@
 import React from 'react';
 import Price from './valveprice.json';
+import Signature from './Signature.js';
 console.log(Price);
 
 class Valve extends React.Component{
@@ -17,8 +18,12 @@ class Valve extends React.Component{
 
     pricing = (pricing) => {
         return(
-            <div>
-                <p>{pricing.Type}, {pricing.MOC}, {pricing.Rating}, {pricing.Size}", Rs. {pricing.Price}/-</p>
+            <div className='price'>
+                <div>{pricing.Type}</div>
+                <div>{pricing.MOC}</div>
+                <div>{pricing.Rating}</div>
+                <div>{pricing.Size}" Inch</div>
+                <div id='price'>Rs. {pricing.Price}/-</div>
             </div>
         )
     }
@@ -70,18 +75,28 @@ class Valve extends React.Component{
     render(){
         return(
             <div>
-                <h1>Valve Pricing</h1>
-                <form>
+                <h1>Valve Pricing</h1><hr></hr>
+                <form class='form'>
                     <input type='text' placeholder='Valve Type' onChange={this.typeHandler} />
                     <input type='text' placeholder='Valve MOC' onChange={this.mocHandler} />
                     <input type='text' placeholder='Valve Rating' onChange={this.ratingHandler} />
                     <input type='text' placeholder='Valve Size' onChange={this.sizeHandler} />
                 </form>
-                {this.state.price.filter(this.filterType)
-                                    .filter(this.filterMOC)
-                                        .filter(this.filterRating)
-                                            .filter(this.filterSize)
-                                                .map(this.pricing)}
+                <div className='valveparameter'>
+                    <div>Type</div>
+                    <div>MOC</div>
+                    <div>Rating</div>
+                    <div>Size</div>
+                    <div>Price</div>
+                </div>
+                <div>
+                    {this.state.price.filter(this.filterType)
+                                        .filter(this.filterMOC)
+                                         .filter(this.filterRating)
+                                          .filter(this.filterSize)
+                                           .map(this.pricing)}
+                </div>
+                <Signature />
             </div>
         )
     }
