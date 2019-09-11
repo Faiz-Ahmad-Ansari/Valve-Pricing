@@ -77,10 +77,10 @@ class Valve extends React.Component{
             <div>
                 <h1>Valve Pricing</h1><hr></hr>
                 <form class='form'>
-                    <input type='text' placeholder='Valve Type' onChange={this.typeHandler} />
-                    <input type='text' placeholder='Valve MOC' onChange={this.mocHandler} />
-                    <input type='text' placeholder='Valve Rating' onChange={this.ratingHandler} />
-                    <input type='text' placeholder='Valve Size' onChange={this.sizeHandler} />
+                    <input type='text' placeholder='Type' onChange={this.typeHandler} />
+                    <input type='text' placeholder='MOC' onChange={this.mocHandler} />
+                    <input type='text' placeholder='Rating' onChange={this.ratingHandler} />
+                    <input type='text' placeholder='Size' onChange={this.sizeHandler} />
                 </form>
                 <div className='valveparameter'>
                     <div>Type</div>
